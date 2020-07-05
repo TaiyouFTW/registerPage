@@ -59,10 +59,6 @@ body {
     overflow: hidden;
 }
 
-.wrapper {
-    min-height: calc(100vh - 128px); // 100% page height - (header height + footer height);
-}
-
 .simpleShadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
 }

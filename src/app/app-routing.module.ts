@@ -5,18 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '',
     pathMatch: 'full',
-    redirectTo: 'hero'
+    redirectTo: 'login'
   },
   {
-    path: 'hero',
-    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path: '404',
     loadChildren: () => import('./status-code/status-code.module').then(m => m.StatusCodeModule)
   },
   { path: '**',
-    redirectTo: '404' // home or 404
+    redirectTo: '404'
   }
 ];
 

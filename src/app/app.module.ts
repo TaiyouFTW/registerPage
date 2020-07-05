@@ -5,13 +5,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
-// Font Awesome imports
-import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
-// import { fas } from '@fortawesome/free-solid-svg-icons';
-// import { far } from '@fortawesome/free-regular-svg-icons';
-// import { fab } from '@fortawesome/free-brands-svg-icons';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
 // Interceptors
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 
@@ -31,7 +24,6 @@ const components = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule,
     SharedModule
   ],
   providers: [
@@ -42,11 +34,4 @@ const components = [
   ]
 })
 export class AppModule {
-  constructor(library: FaIconLibrary) {
-    // Add an icon to the library for convenient access in other components
-    // library.addIcons(faCoffee);
-
-    // Add icon package to the library for convenient access in other components
-    // library.addIconPacks(fas, far, fab);
-  }
- }
+}
