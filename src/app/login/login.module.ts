@@ -8,6 +8,7 @@ import { faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
@@ -29,7 +30,8 @@ import { SignInComponent } from './shared/components/sign-in/sign-in.component';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class LoginModule {

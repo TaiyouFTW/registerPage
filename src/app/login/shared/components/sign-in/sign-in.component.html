@@ -7,13 +7,16 @@
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-group">
                     <mat-form-field appearance="fill" class="d-block">
                         <mat-label>Username</mat-label>
-                        <input matInput formControlName="username" required>
+                        <input matInput formControlName="username" autocomplete="username" required>
                         <mat-error>The username can't be empty</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="fill" class="d-block">
                         <mat-label>Password</mat-label>
-                        <input matInput formControlName="password" required>
+                        <input matInput formControlName="password" autocomplete="password" [type]="hide ? 'password' : 'text'" required>
+                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
                         <mat-error>The password can't be empty</mat-error>
                     </mat-form-field>
 
