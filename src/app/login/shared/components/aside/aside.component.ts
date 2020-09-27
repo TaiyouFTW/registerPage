@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { isNullOrUndefined } from 'util';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  selector: 'app-aside',
+  templateUrl: './aside.component.html',
+  styleUrls: ['./aside.component.scss'],
 })
-export class SignInComponent implements OnInit {
+export class AsideComponent implements OnInit {
 
   message: string;
   oldMessage: string;
@@ -41,7 +40,7 @@ export class SignInComponent implements OnInit {
     this.oldMessage = JSON.parse(localStorage.getItem('oldMessage')); // Pega a mensagem antiga do local storage
 
     // Verifica se tem uma mensagem antiga
-    if (isNullOrUndefined(this.oldMessage)) {
+    if (this.oldMessage == null || this.oldMessage == undefined || this.oldMessage == '') {
       localStorage.setItem('oldMessage', JSON.stringify(this.messages[this.index])); // Caso não tenha mensagem antiga a atual se torna a antiga
     } else {
       // Caso tenha uma mensagem antiga verifica se ela é igual a atual
@@ -77,4 +76,5 @@ export class SignInComponent implements OnInit {
     }
     return array;
   }
+
 }

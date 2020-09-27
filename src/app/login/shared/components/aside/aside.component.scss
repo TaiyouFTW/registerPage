@@ -1,0 +1,30 @@
+@import "./../../../../../colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Shadows+Into+Light&display=swap");
+
+aside {
+    background-color: $color-light;
+    min-height: 100vh;
+}
+
+aside h1 {
+    font-family: "Galada", cursive;
+    font-size: 3rem;
+    color: $color-darken;
+    line-height: 1.25;
+    margin-top: 5rem;
+}
+
+aside span {
+    font-family: "Shadows Into Light", cursive;
+    color: $color-dark;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+img {
+    margin: 0 25px;
+}
+
+.group-header {
+    padding: 60px 60px 30px;
+}

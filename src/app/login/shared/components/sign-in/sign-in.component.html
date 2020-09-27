@@ -1,0 +1,27 @@
+<main class="container h-100">
+    <div class="row h-100">
+        <div class="col-12 col-md-4 offset-md-4 h-100">
+            <div class="h-100 d-flex flex-column justify-content-center">
+                <h1 class="mt-5">The best adventure</h1>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-group">
+                    <mat-form-field appearance="fill" class="d-block">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" required>
+                        <mat-error>The username can't be empty</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="d-block">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" required>
+                        <mat-error>The password can't be empty</mat-error>
+                    </mat-form-field>
+
+                    <button type="submit" mat-flat-button color="primary" class="text-white btn-block">Sign in</button>
+                </form>
+
+                <button type="button" mat-button color="primary" class="mt-2 btn-block">Forgot password</button>
+            </div>
+        </div>
+    </div>
+</main>

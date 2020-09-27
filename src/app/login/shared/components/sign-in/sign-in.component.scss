@@ -1,0 +1,12 @@
+@import "./../../../../../colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+h1 {
+    font-family: "Shadows Into Light", cursive;
+    color: $color-darken;
+    font-weight: bold;
+}
+
+.mat-form-field {
+    margin: 0.5rem 0;
+}
